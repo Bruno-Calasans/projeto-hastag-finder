@@ -20,7 +20,7 @@ const equipe = base('equipe')
 const login = base('login')
 
 // use este hook para fazer requisições na api do airtable
-export const seApi = () => ({
+export const useApi = () => ({
 
     example() {
         projetos
