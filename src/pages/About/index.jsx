@@ -1,4 +1,12 @@
 
+import { useApi } from './../../hooks/useApi';
+
 export default function About() {
-    return <div>Página About</div>
+    const api = useApi()
+    
+    return (
+
+        <div>Página About</div>
+
+    )
 }
