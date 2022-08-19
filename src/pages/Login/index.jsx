@@ -1,3 +1,7 @@
 export default function Login() {
-    return <div>Página Login</div>
+    return (
+    <Layout>
+        <div>Página Login</div>   
+    </Layout>
+    )
 }

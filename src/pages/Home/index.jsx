@@ -1,4 +1,9 @@
-export default function Home() {
+import { Layout } from '../../Layout'
 
-    return <div>Página Home</div>
+export default function Home() {
+    return(
+    <Layout>
+        <div>Página Home</div>   
+    </Layout>
+    )
 }

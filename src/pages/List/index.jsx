@@ -1,4 +1,8 @@
 export default function List() {
 
-    return <div>Página List</div>
+    return (
+    <Layout>
+    <div>Página List</div>   
+    </Layout>
+    )
 }

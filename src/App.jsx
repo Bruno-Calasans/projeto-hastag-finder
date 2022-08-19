@@ -1,6 +1,6 @@
 
 import { Routes,  Route} from 'react-router-dom'
-import { GlobalStyle } from './App.style.js'
+import { GlobalStyle } from './App.style'
 
 import Home from './pages/Home'
 import Login from './pages/Login'
