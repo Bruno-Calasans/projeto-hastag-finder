@@ -29,6 +29,16 @@ html {
 body {
   margin: 0;
   font-family: rubik, sans-serif;
+  height: 100vh;
+}
+
+#root {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100px 1fr 50px;
+  width: 100%;
+  height: 100%;
+
 }
 /**
  * Render the main element consistently in IE.

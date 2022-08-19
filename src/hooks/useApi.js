@@ -15,7 +15,7 @@ const base = new Airtable({apiKey: API_KEY}).base(BASE_KEY);
 
 // tabelas
 const projetos = base('projeto')
-const buscas = base('puscas')
+const buscas = base('buscas')
 const equipe = base('equipe')
 const login = base('login')
 
