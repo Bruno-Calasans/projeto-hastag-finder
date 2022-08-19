@@ -28,7 +28,7 @@ html {
  */
 body {
   margin: 0;
-  font-family: roboto, sans-serif;
+  font-family: rubik, sans-serif;
 }
 /**
  * Render the main element consistently in IE.
