@@ -27,6 +27,9 @@ html {
  * Remove the margin in all browsers.
  */
 body {
+  text-rendering: optimizeLegibility; 
+  background-color: #0A1744;
+  color: #FFFFFF;
   margin: 0;
   font-family: rubik, sans-serif;
 }
@@ -34,6 +37,7 @@ body {
  * Render the main element consistently in IE.
  */
 main {
+  margin-top: 80px;
   display: block;
 }
 /* Vertical rhythm */
