@@ -5,17 +5,20 @@ export const Container = styled.div`
 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
+    text-align: center;
 
-    width: 200px;
-    height: 200px;
+    width: 250px;
+    height: 300px;
     padding: 10px;
+    margin: 10px;
     border-radius: 4px;
-    border: 1px solid black;
+    border: 1px solid #FFFFFF24;
 
-
-    background-color: gray;
+    background-color: #0B1A49;
+    box-shadow: 0px 5px 10px black;
+    overflow: hidden;
 
     figure {
         flex-grow: 1;
@@ -24,34 +27,48 @@ export const Container = styled.div`
         flex-direction: column;
         align-items: center;
 
-        img {
-           
-            width: 50%;
+        .avatar {
+            width: 60%;
             border-radius: 50%;
             background-color: lightblue;
         }
 
-        figcaption {
+        .name {
             flex-grow: 1;
             font-weight: bold;
             display: flex;
             justify-content: center;
             align-items: center;
+
+            margin-top: 5px;
+            color: #72EFDB;
+
         }
+
     }
 
-    p {
+    .desc {
+        flex-grow: 2;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 0.8rem;
+    }
+
+    .social-medias {
         flex-grow: 1;
         display: flex;
         justify-content: center;
         align-items: center;
     }
 
-    div {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+    svg {
+        color: #72EFDB;
+        cursor: pointer;
+
+        &:hover {
+            color: black;
+        }
     }
 `
 

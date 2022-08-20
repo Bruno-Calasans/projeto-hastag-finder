@@ -4,8 +4,8 @@ export const Header = styled.header`
   height: 80px;
   width: 100%;
 
-  padding: 0 64px;
-  position: absolute;
+  padding: 0 20px; /* tava dando problema se colocar 64px */
+  position: sticky;
   top: 0;
   left: 0;
 
@@ -17,6 +17,7 @@ export const Header = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
 `
 
 export const Logo = styled.div`
@@ -33,5 +34,19 @@ export const ButtonsWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+`
+
+export const Footer = styled.footer`
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  background-color: #1E3E7B;
+
+  width: 100%;
+  height: 80px;
+
 `
 

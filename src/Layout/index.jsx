@@ -1,10 +1,6 @@
 
-import './style'
-
-export function Layout ({children}){
-
 import { Button } from '../components/Button'
-import { ButtonsWrapper, Header, Logo } from './styled'
+import { ButtonsWrapper, Header, Logo, Footer } from './styled'
 
 export function Layout ({isLoggedIn ,route ,children}){
 
@@ -31,9 +27,9 @@ export function Layout ({isLoggedIn ,route ,children}){
     <main>
       {children}
     </main>
-    <footer>
-      Olá eu sou o footer
-    </footer>
+    <Footer>
+      @Cocreare 2022. Todos os direitos reservados
+    </Footer>
     </>
   ) 
 }
