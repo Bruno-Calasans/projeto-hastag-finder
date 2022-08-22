@@ -1,12 +1,11 @@
 import { Layout } from '../../Layout';
-import { useApi } from './../../hooks/useApi';
+//import { useApi } from './../../hooks/useApi';
 
-import {AboutSection, TeamSection, ProfilesContainer} from './style'
+import {AboutSection, TeamSection} from './style'
 import ProfileCard from '../../components/ProfileCard';
 
-
 export default function About() {
-    const api = useApi()
+    //const api = useApi()
     
     return (
     <Layout>
@@ -23,44 +22,44 @@ export default function About() {
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corporis fugit accusamus animi culpa voluptatem, sunt beatae repudiandae maxime laboriosam, architecto dignissimos debitis totam id iusto facere saepe quasi! Fuga, dolore.
                 </p>
             </div>
-            <img src="src/imgs/example_image.png" alt="" />
+            <img src="public\images\about-ilustration.svg" alt="" />
         </AboutSection>
 
         <TeamSection>
 
             <h1>Quem Somos</h1>
 
-            <ProfilesContainer>
+            <div className='profilesContainer'>
 
                 <ProfileCard
                 user={{
-                    url: 'src/imgs/profile.svg',
+                    url: 'public/icons/icon-user-alt.svg',
                     name: 'James Bakster',
                     desc: 'Tenho mestrado em Ciências da Computação e CEO da empresa TodosFudidos'
                 }}/>
 
                 <ProfileCard
                 user={{
-                    url: 'src/imgs/profile.svg',
+                    url: 'public/icons/icon-user-alt.svg',
                     name: 'Alex Lupin',
                     desc: 'Formato em Análise e Desenvolvimento de Sistemas pela NoOrg e Entusiasta em Massagens Espirituas Demoníacas'
                 }}/>
 
                 <ProfileCard
                 user={{
-                    url: 'src/imgs/profile.svg',
+                    url: 'public/icons/icon-user-alt.svg',
                     name: 'Cláudio Baunilha',
                     desc: 'Formado em Gestão de Escravos e fundador do Insituto Todos Podem Ser Escravos'
                 }}/>
 
                 <ProfileCard
                 user={{
-                    url: 'src/imgs/profile.svg',
+                    url: 'public/icons/icon-user-alt.svg',
                     name: 'Germe Verme',
                     desc: 'Gosto de você. Me nota >.<'
                 }}/>
 
-            </ProfilesContainer>
+            </div>
 
         </TeamSection>
 

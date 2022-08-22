@@ -32,8 +32,6 @@ body {
   color: #FFFFFF;
   margin: 0;
   font-family: rubik, sans-serif;
-  height: 100%;
-
 }
 
 /**

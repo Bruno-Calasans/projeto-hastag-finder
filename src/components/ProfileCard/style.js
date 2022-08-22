@@ -9,10 +9,11 @@ export const Container = styled.div`
     align-items: center;
     text-align: center;
 
-    width: 250px;
+    width: 80%;
     height: 300px;
     padding: 10px;
     margin: 10px;
+    
     border-radius: 4px;
     border: 1px solid #FFFFFF24;
 
@@ -28,9 +29,9 @@ export const Container = styled.div`
         align-items: center;
 
         .avatar {
-            width: 60%;
+            width: 100px;
             border-radius: 50%;
-            background-color: lightblue;
+            background-color: lightslategray;
         }
 
         .name {

@@ -33,8 +33,14 @@ export const ButtonsWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
   gap: 16px;
+
 `
 
+export const Main = styled.main`
+  margin-top: 50px;
+  margin-bottom: 50px;
+
+`
 export const Footer = styled.footer`
   display: flex;
   justify-content: center;

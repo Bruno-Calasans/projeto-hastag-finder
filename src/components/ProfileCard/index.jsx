@@ -1,13 +1,13 @@
 
 import { Container } from './style'
-import {Github} from '@styled-icons/boxicons-logos/Github'
-import {Email} from '@styled-icons/material/Email'
-import {LinkedinSquare} from '@styled-icons/boxicons-logos/LinkedinSquare'
+import { Github } from '@styled-icons/boxicons-logos/Github'
+import { Email } from '@styled-icons/material/Email'
+import { LinkedinSquare } from '@styled-icons/boxicons-logos/LinkedinSquare'
 
 export default function ProfileCard(props) {
 
-    const size = '28px'
-    const {url, name, desc} = props.user
+    const size = 28
+    const { url, name, desc } = props.user
 
     return (
         <Container>
