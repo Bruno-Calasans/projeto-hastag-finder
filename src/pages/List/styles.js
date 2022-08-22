@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Title = styled.h3`
     font: normal normal bold 24px/28px Rubik;
     color: #72EFDB;
-    margin-left: 150px;
+    margin-left: 155px;
     margin-top: 20px
 `
 
@@ -41,3 +41,27 @@ export const Titles = styled.h3`
     font: normal normal bold 18px Rubik;
     color: #72EFDB;
 `
+
+export const Items = styled.div`
+    display: flex;
+    gap: 90px;
+    padding: 18px;
+    color: #72EFDB;
+    
+`
+export const FirstParagraph = styled.p`
+    display: inline-block;
+    width: 100%;
+    color: #fff;
+`
+
+
+export const Divider = styled.div`
+    width: 98%;
+    margin: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    &:last-child {
+        display:none;
+    }
+`
+
