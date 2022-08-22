@@ -11,13 +11,12 @@ export const Header = styled.header`
 
   background: rgba( 10, 23, 68, 0.6 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.1 );
-  backdrop-filter: blur( 7.5px );
-  -webkit-backdrop-filter: blur( 7.5px );
+  backdrop-filter: blur( 6px );
+  -webkit-backdrop-filter: blur( 6px );
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 `
 
 export const Logo = styled.div`
@@ -37,7 +36,6 @@ export const ButtonsWrapper = styled.div`
 `
 
 export const Footer = styled.footer`
-  position: absolute;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -47,6 +45,5 @@ export const Footer = styled.footer`
 
   width: 100%;
   height: 80px;
-
 `
 

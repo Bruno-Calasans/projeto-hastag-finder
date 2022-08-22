@@ -28,7 +28,7 @@ export function Layout ({isLoggedIn ,route ,children}){
       {children}
     </main>
     <Footer>
-      @Cocreare 2022. Todos os direitos reservados
+      @Newtab Academy 2022. Todos os direitos reservados
     </Footer>
     </>
   ) 
