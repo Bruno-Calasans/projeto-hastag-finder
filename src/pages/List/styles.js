@@ -3,22 +3,31 @@ import styled from "styled-components";
 export const Title = styled.h3`
     font: normal normal bold 24px/28px Rubik;
     color: #72EFDB;
-    margin-left: 155px;
-    margin-top: 20px
+    margin-top: 20px;
+
+    @media(min-width: 1025px){
+       margin-right: 750px
+    }
 `
 
 export const Container = styled.div`
     display: flex;
     justify-content: center; 
+    flex-direction: column;
+    align-items: center;
 `
 
 export const Table = styled.div`
     width: 75vw;
-    height: 440px;
+    height: 100vh;
     margin: 20px;
     background: #18326B;
     border-radius: 14px;
-    
+
+    @media(min-width: 375px) and (max-width: 768px){
+        width: 100vw;
+    }
+     
 `
 
 export const Header = styled.div`
@@ -52,7 +61,7 @@ export const Items = styled.div`
 export const FirstParagraph = styled.p`
     display: inline-block;
     width: 100%;
-    color: #fff;
+    color: #fff;  
 `
 
 

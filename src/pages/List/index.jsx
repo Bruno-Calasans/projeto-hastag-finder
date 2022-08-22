@@ -38,14 +38,30 @@ export default function List() {
             data: '25/05', 
             hour: '09:30'
         },
+        {
+            hashtag: '#hashtag',
+            data: '25/05', 
+            hour: '09:30'
+        },
+        {
+            hashtag: '#hashtag',
+            data: '25/05', 
+            hour: '09:30'
+        },
+        {
+            hashtag: '#hashtag',
+            data: '25/05', 
+            hour: '09:30'
+        },
         
     ]
 
 
     return (
     <Layout>
-        <C.Title>Buscas Realizadas</C.Title>
+       
         <C.Container>
+        <C.Title>Buscas Realizadas</C.Title>
                 <C.Table>
                     <C.Header>
                         <C.TitleTable>Hastag</C.TitleTable>
