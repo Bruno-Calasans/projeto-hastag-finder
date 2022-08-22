@@ -2,7 +2,7 @@ import * as C from './styles'
 import { Layout } from '../../Layout'
 export default function List() {
 
-    const Itens = [
+    const Items = [
         {
             hashtag: '#hashtag',
             data: '25/05', 
@@ -53,12 +53,15 @@ export default function List() {
                         <C.Titles>Hora</C.Titles>
                     </C.Header>
                     <div>
-                    {Itens.map((item)=> (
-                        <div>
-                            <p>{item.hashtag}</p>
+                    {Items.map((item)=> (
+                        <>
+                        <C.Items>
+                            <C.FirstParagraph>{item.hashtag}</C.FirstParagraph>
                             <p>{item.data}</p>
                             <p>{item.hour}</p>
-                        </div>
+                        </C.Items>
+                        <C.Divider></C.Divider>
+                        </>
                     ))}
                     </div>
                 </C.Table>
