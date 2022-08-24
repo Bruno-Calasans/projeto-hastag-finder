@@ -3,29 +3,25 @@ import styled from "styled-components";
 export const Title = styled.h3`
     font: normal normal bold 24px/28px Rubik;
     color: #72EFDB;
-    margin-top: 20px;
+    text-align: center;
+    margin: 35px;
 
-    @media(min-width: 1025px){
-       margin-right: 750px
+    @media(min-width: 769px){
+       text-align: left;
+       padding-left: 170px;
     }
-`
 
-export const Container = styled.div`
-    display: flex;
-    justify-content: center; 
-    flex-direction: column;
-    align-items: center;
+    
+    
 `
 
 export const Table = styled.div`
     width: 75vw;
-    height: 100vh;
-    margin: 20px;
+    margin: 0 auto;
     background: #18326B;
     border-radius: 14px;
-
-    @media(min-width: 375px) and (max-width: 768px){
-        width: 100vw;
+    @media(max-width: 768px){
+        width: 100%;
     }
      
 `
@@ -73,4 +69,3 @@ export const Divider = styled.div`
         display:none;
     }
 `
-
