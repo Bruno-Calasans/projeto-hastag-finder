@@ -5,37 +5,37 @@ export default function List() {
     const Items = [
         {
             hashtag: '#hashtag',
-            data: '25/05', 
+            date: '25/05', 
             hour: '09:30'
         },
         {
             hashtag: '#hashtag',
-            data: '25/05', 
+            date: '25/05', 
             hour: '09:30'
         },
         {
             hashtag: '#hashtag',
-            data: '25/05', 
+            date: '25/05', 
             hour: '09:30'
         },
         {
             hashtag: '#hashtag',
-            data: '25/05', 
+            date: '25/05', 
             hour: '09:30'
         },
         {
             hashtag: '#hashtag',
-            data: '25/05', 
+            date: '25/05', 
             hour: '09:30'
         },
         {
             hashtag: '#hashtag',
-            data: '25/05', 
+            date: '25/05', 
             hour: '09:30'
         },
         {
             hashtag: '#hashtag',
-            data: '25/05', 
+            date: '25/05', 
             hour: '09:30'
         },
        
@@ -56,7 +56,7 @@ export default function List() {
                         <>
                         <C.Items>
                             <C.FirstParagraph>{item.hashtag}</C.FirstParagraph>
-                            <p>{item.data}</p>
+                            <p>{item.date}</p>
                             <p>{item.hour}</p>
                         </C.Items>
                         <C.Divider></C.Divider>
