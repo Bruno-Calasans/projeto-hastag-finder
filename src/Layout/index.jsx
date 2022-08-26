@@ -1,6 +1,6 @@
 
 import { Button } from '../components/Button'
-import { ButtonsWrapper, Header, Logo,Main, Footer } from './styled'
+import { ButtonsWrapper, Header, Logo, Footer, Main } from './styled'
 
 export function Layout ({isLoggedIn ,route ,children}){
 
@@ -29,6 +29,7 @@ export function Layout ({isLoggedIn ,route ,children}){
     </Main>
     <Footer>
       @Newtab Academy 2022. Todos os direitos reservados
+      dd
     </Footer>
     </>
   ) 

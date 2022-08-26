@@ -11,7 +11,7 @@ export const Container = styled.div`
 
     width: 80%;
     height: 300px;
-    padding: 10px;
+    padding: 35px;
     margin: 10px;
     
     border-radius: 4px;
@@ -37,6 +37,7 @@ export const Container = styled.div`
         .name {
             flex-grow: 1;
             font-weight: bold;
+            font-size:1.8rem;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -49,11 +50,7 @@ export const Container = styled.div`
     }
 
     .desc {
-        flex-grow: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 0.8rem;
+        font-size:1.2rem;
     }
 
     .social-medias {

@@ -28,16 +28,16 @@ export const ButtonBase = styled.button`
   align-items: center;
   gap: 6px;
 
-  font-size: 11px;
+  font-size: 1em;
   font-weight: bold;
   letter-spacing: 1.5px;
   text-transform: uppercase;
 
   
-  width: 112px;
-  height: 32px;
-  
-  border-radius: 16px;
+  width: 45%;
+  height: 100%;
+
+  border-radius: 2em;
 
   ${props => props.color === "green" && css`
   background-color: #72EFDB;
@@ -52,5 +52,10 @@ export const ButtonBase = styled.button`
   >span {
     padding: 3px 0 0 0;
     line-height:16px;
+  }
+
+  @media (max-width: 460px){
+    width: 50%;
+    gap: 3px;
   }
 `

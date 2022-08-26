@@ -4,15 +4,12 @@ export const Title = styled.h3`
     font: normal normal bold 24px/28px Rubik;
     color: #72EFDB;
     text-align: center;
-    margin: 35px;
+    margin: 18vh 35px 35px;
 
     @media(min-width: 769px){
        text-align: left;
        padding-left: 170px;
     }
-
-    
-    
 `
 
 export const Table = styled.div`
@@ -22,8 +19,7 @@ export const Table = styled.div`
     border-radius: 14px;
     @media(max-width: 768px){
         width: 100%;
-    }
-     
+    }   
 `
 
 export const Header = styled.div`

@@ -5,40 +5,59 @@ export const AboutSection = styled.section`
 
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: space-between;
 
-    padding: 20px;
+    padding: 17.5vh 7vw;
     overflow: hidden;
 
     div {
         align-self: flex-start;
 
         h1 {
-            font-size: 3rem;
-            padding: 5px;
+            font-size: 5rem;
+            font-weight: bold;
+            margin-bottom: 40px;
         }
 
-        p { text-align: justify; }
+        p { 
+            color: #FCFCFC;
+            text-align: start; 
+            line-height: 2rem;
+            font-size: 1.3rem/1.8rem;
+
+            max-width: 39vw;
+            min-width: 290px;
+
+            @media (max-width: 840px){
+                width: 100%;
+                max-width: 100%;
+            }
+        }
     }
    
     img {
-        width: 40%;
-        margin-left: 30px;
+        margin: 62px 0;
+        width: 33vw;
+        max-width: 637px;
+        min-width: 290px;
     }
 
-    /* Máximo Conteúdo */
-    @media (min-width: 1440px) {
-        width: 1440px; 
-        margin: auto; 
- 
-    }
 
     @media (max-width: 840px) {
-        flex-direction: column;
+
+        padding: 17.5vh 5vw;
+        > div {
+            > h1 {
+                font-size: 3rem;
+            }
+        }
 
         img {
+            margin: 32px auto;
+            flex-direction: column;
             width: 60%;
-            margin: 30px 0px 0px 0px;
         }
     }
 
@@ -49,21 +68,19 @@ export const TeamSection = styled.section`
     display: flex;
     flex-direction: column;
     
+    padding: 0 7vw 10vh;
     height: 100%;
-    padding: 20px;
+    
 
     overflow: hidden;
 
     h1 {
-        font-size: 3rem;
+        padding-left: 18px;
+        font-size: 3.4rem;
+        font-weight: bold;
+        margin-bottom: 10vh;
     }
-
-    /* Máximo Conteúdo */
-    @media (min-width: 1200px) {
-       width: 1200px;
-       margin: auto;
-    }
-
+    
     .profilesContainer {
 
         display: flex;

@@ -3,6 +3,7 @@ import styled from "styled-components";
 export const Back = styled.div`
   background: url("../../../public/images/hero-bg.jpg");
   background-size: cover;
+ 
 
   @media (max-width: 600px) {
     background: url("../../../public/images/mobile-hero-bg.jpg");
@@ -14,6 +15,8 @@ export const LoginSection = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
+
+  padding: 23vh 0;
 `;
 
 export const Form = styled.div`

@@ -20,6 +20,22 @@ html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
   -webkit-tap-highlight-color: transparent; /* 3*/
+
+  @media (max-width: 1888px){
+    font-size: 14px;
+  }
+  @media (max-width: 1656px){
+    font-size: 13px;
+  }
+  @media (max-width: 1532px){
+    font-size: 12px;
+  }
+  @media (max-width: 1410px){
+    font-size: 11px;
+  }
+  @media (max-width: 1300px){
+    font-size: 10px;
+  }
 }
 /* Sections */
 /* ============================================ */
