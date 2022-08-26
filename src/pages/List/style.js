@@ -8,46 +8,58 @@ export const Title = styled.h3`
 
     @media(min-width: 769px){
        text-align: left;
-       padding-left: 170px;
+       padding-left 55px;
     }
+
+    @media(min-width: 770px){
+        text-align: left;
+        padding-left: 170px;
+    }
+
+    
 `
 
 export const Table = styled.div`
-    width: 75vw;
+    width: 100%;
     margin: 0 auto;
     background: #18326B;
     border-radius: 14px;
-    @media(max-width: 768px){
-        width: 100%;
-    }   
+
+    @media(min-width: 640px){
+        width: 75vw;
+    }
+    
 `
 
 export const Header = styled.div`
     display: flex;
     justify-content: space-between;
-    gap: 90px;
+    gap: 40px;
     height: 50px;
     width: 100%;
     background: rgba( 10, 23, 68, 0.6 );
-    padding: 20px;
+    padding: 18px;
+    margin-reight: 10px;
 `
 
 export const TitleTable = styled.div`
    width: 100%;
    font: normal normal bold 18px Rubik;
    color: #72EFDB;
+   
 `
 
 export const Titles = styled.h3`
     font: normal normal bold 18px Rubik;
-    color: #72EFDB;
+    color: #72EFDB; 
 `
 
 export const Items = styled.div`
     display: flex;
-    gap: 90px;
+    gap: 50px;
     padding: 18px;
     color: #72EFDB;
+
     
 `
 export const FirstParagraph = styled.p`
