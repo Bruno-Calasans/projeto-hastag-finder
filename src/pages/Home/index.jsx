@@ -13,7 +13,7 @@ export default function Home() {
                 </p>
             </TitleWrapper>
             <InputWrapper>
-                <img src="/icons/icon-search.svg"/>
+                <img src="./icons/icon-search.svg"/>
                 <input 
                     type="text"
                     placeholder="Buscar..."

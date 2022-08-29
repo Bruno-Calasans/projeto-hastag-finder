@@ -11,7 +11,7 @@ export const Container = styled.div`
 
     width: 80%;
     height: 300px;
-    padding: 35px;
+    padding: 20px;
     margin: 10px;
     
     border-radius: 4px;
@@ -21,52 +21,61 @@ export const Container = styled.div`
     box-shadow: 0px 5px 10px black;
     overflow: hidden;
 
-    figure {
-        flex-grow: 1;
+`
 
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+export const Profile = styled.figure`
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+`
 
-        .avatar {
-            width: 100px;
-            border-radius: 50%;
-            background-color: lightslategray;
-        }
+export const Avatar = styled.img`
+    width: 100px;
+    border-radius: 50%;
+    background-color: lightslategray;
+`
 
-        .name {
-            flex-grow: 1;
-            font-weight: bold;
-            font-size:1.8rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+export const Name = styled.figcaption`
+    flex-grow: 1;
+    font-weight: bold;
+    font-size:1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-            margin-top: 5px;
-            color: #72EFDB;
+    margin-top: 5px;
+    color: #72EFDB;
+`
 
-        }
+export const Description = styled.div`
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:1.2rem;
+    height: 30%;
+`
 
-    }
+export const SocialMidiaContainer = styled.div`
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`
 
-    .desc {
-        font-size:1.2rem;
-    }
+export const SocialMidia = styled.a`
 
-    .social-medias {
-        flex-grow: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
+    color: #72EFDB;
+    cursor: pointer;
 
     svg {
-        color: #72EFDB;
-        cursor: pointer;
+        width: 28px;
+        height: 28px;
+        margin: 0px 4px;
+    }
 
-        &:hover {
-            color: black;
-        }
+    &:hover {
+        path {fill: black;}
     }
 `
 

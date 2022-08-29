@@ -1,7 +1,7 @@
 import { Layout } from '../../Layout';
 //import { useApi } from './../../hooks/useApi';
 
-import {AboutSection, TeamSection} from './style'
+import {AboutSection, TeamSection, ProfilesContainer} from './style'
 import ProfileCard from '../../components/ProfileCard';
 
 export default function About() {
@@ -24,7 +24,7 @@ export default function About() {
 
             <h1>Quem Somos</h1>
 
-            <div className='profilesContainer'>
+            <ProfilesContainer>
 
                 <ProfileCard
                 user={{
@@ -54,7 +54,7 @@ export default function About() {
                     desc: 'Gosto de você. Me nota >.<'
                 }}/>
 
-            </div>
+            </ProfilesContainer>
 
         </TeamSection>
 

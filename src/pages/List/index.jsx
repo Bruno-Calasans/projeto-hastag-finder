@@ -1,4 +1,5 @@
 import * as C from './style'
+import React from 'react'
 import { Layout } from '../../Layout'
 export default function List() {
 
@@ -52,15 +53,16 @@ export default function List() {
                         <C.Titles>Hora</C.Titles>
                     </C.Header>
                     <div>
-                    {Items.map((item)=> (
-                        <>
+                    {Items.map((item, index)=> (
+
+                        <React.Fragment key={index}>
                         <C.Items>
                             <C.FirstParagraph>{item.hashtag}</C.FirstParagraph>
                             <p>{item.date}</p>
                             <p>{item.hour}</p>
                         </C.Items>
                         <C.Divider></C.Divider>
-                        </>
+                        </React.Fragment >
                     ))}
                     </div>
                 </C.Table>

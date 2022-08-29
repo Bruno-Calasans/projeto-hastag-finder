@@ -1,36 +1,39 @@
 
-import { Container } from './style'
-import { Github } from '@styled-icons/boxicons-logos/Github'
-import { Email } from '@styled-icons/material/Email'
-import { LinkedinSquare } from '@styled-icons/boxicons-logos/LinkedinSquare'
+import { Container, Profile, Avatar, Name, Description, SocialMidiaContainer, SocialMidia} from './style'
+
+import {ReactComponent as GitHubLogo} from '/public/icons/icon-github.svg'
+import {ReactComponent as EmailLogo} from '/public/icons/icon-envelope.svg'
+import {ReactComponent as LinkedinLogo} from '/public/icons/icon-awesome-linkedin.svg'
 
 export default function ProfileCard(props) {
 
-    const size = 28
     const { url, name, desc } = props.user
 
     return (
         <Container>
 
-            <figure>
-                <img className='avatar' src={url} alt="example" />
-                <figcaption className='name'>{name}</figcaption>
-            </figure>
+            <Profile>
+                <Avatar src={url} alt="example" />
+                <Name>{name}</Name>
+            </Profile>
 
-            <p className='desc'>{desc}</p>
+            <Description>{desc}</Description>
 
-            <div className='social-medias'>
+            <SocialMidiaContainer>
 
-                <a href="https://github.com/" target='blank'>
-                    <Github width={size} height={size}/>
-                </a>
-                <a href="https://mail.google.com/mail" target='blank'>
-                    <Email width={size} height={size}/>
-                </a>
-                <a href="https://www.linkedin.com/" target='blank'>
-                    <LinkedinSquare width={size} height={size}/>
-                </a>
-            </div>
+                <SocialMidia href="https://github.com/" target='blank'>
+                    <GitHubLogo />
+                </SocialMidia>
+
+                <SocialMidia href="https://mail.google.com/mail" target='blank'>
+                    <EmailLogo />
+                </SocialMidia>
+
+                <SocialMidia href="https://www.linkedin.com/" target='blank'>
+                    <LinkedinLogo />
+                </SocialMidia>
+
+            </SocialMidiaContainer>
     
         </Container>
     )

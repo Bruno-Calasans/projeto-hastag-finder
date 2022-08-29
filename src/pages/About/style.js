@@ -48,7 +48,9 @@ export const AboutSection = styled.section`
     @media (max-width: 840px) {
 
         padding: 17.5vh 5vw;
+        
         > div {
+
             > h1 {
                 font-size: 3rem;
             }
@@ -71,7 +73,6 @@ export const TeamSection = styled.section`
     padding: 0 7vw 10vh;
     height: 100%;
     
-
     overflow: hidden;
 
     h1 {
@@ -80,31 +81,31 @@ export const TeamSection = styled.section`
         font-weight: bold;
         margin-bottom: 10vh;
     }
-    
-    .profilesContainer {
+`
 
-        display: flex;
-        width: 100%;
+export const ProfilesContainer = styled.div`
 
-        @media (max-width: 840px) and (min-width: 630px) {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr ;
+    display: flex;
+    width: 100%;
 
-            div {
-                justify-self: center;
-            }
-        }
-        
+    @media (max-width: 840px) and (min-width: 630px) {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr ;
 
-        @media (max-width: 629px) {
-            align-items: center;
-            flex-direction: column;
-
-            div {
-                width: 300px;
-            }
+        div {
+            justify-self: center;
         }
     }
+
+    @media (max-width: 629px) {
+        align-items: center;
+        flex-direction: column;
+
+        div {
+            width: 300px;
+        }
+    }
+    
 `
 
