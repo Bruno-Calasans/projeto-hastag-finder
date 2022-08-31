@@ -1,7 +1,18 @@
 import * as C from './style'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Layout } from '../../Layout'
+import useApi from '../../hooks/useApi'
+
 export default function List() {
+
+    let [searches, setSearches] = useState([])
+    const api = useApi()
+
+    useEffect(() => {
+        api.getSearches().then(setSearches)
+    
+    }, [])
+
 
     const Items = [
         {
@@ -41,7 +52,6 @@ export default function List() {
         },
        
     ]
-
 
     return (
     <Layout>
