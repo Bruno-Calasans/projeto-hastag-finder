@@ -39,6 +39,26 @@ const useApi = () => ({
 
         return searches
     },
+    async addSearch(hashtag, data) {
+
+        const searchRecord = {fields: {
+            'Squad': SQUAD_ID,
+            'Hastag': hashtag,
+            'Data': data
+        }}
+
+        let successAddSearch = null
+
+        buscas
+        .create([searchRecord], 
+        (err, records) => {
+            if(err) { successAddSearch = false }
+            else { successAddSearch = true }
+        })
+
+        return successAddSearch
+           
+    },
     async getTeam() {
 
         let team = []
