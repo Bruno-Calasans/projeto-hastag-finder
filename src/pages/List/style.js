@@ -68,7 +68,6 @@ export const FirstParagraph = styled.p`
     color: #fff;  
 `
 
-
 export const Divider = styled.div`
     width: 98%;
     margin: auto;
