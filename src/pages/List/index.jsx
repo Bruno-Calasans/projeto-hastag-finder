@@ -14,15 +14,33 @@ export default function List() {
         api.getSearches().then(setSearches)
         
     }, [])
-     
-    const itens = [
-        {
-            tag: '#testando',
-            date: 1662144619
-        }
-    ]
 
- 
+
+    
+
+    const [pageNumber, setPageNumber] = useState(0)
+    const itensPerPage = 5
+    const pagesVisited = pageNumber * itensPerPage
+
+    const displayItens = searches.slice(pagesVisited, pagesVisited + itensPerPage).map(searche => {
+        return (
+        <C.Items key={searche}>
+            <C.FirstParagraph>{searche.Hashtag}</C.FirstParagraph>
+            <p>
+                 {new Intl.DateTimeFormat('pt-BR', { month: '2-digit',day: '2-digit'}).format(searche.Data*1000)}
+            </p>
+            <p>
+                {new Intl.DateTimeFormat('pt-BR', { hour: '2-digit', minute: '2-digit'}).format(searche.Data*1000)}
+            </p>
+        </C.Items>
+
+        )
+    })
+
+    const pageCount = Math.ceil(searches.length / itensPerPage)
+    const changePage = ({ selected }) => {
+        setPageNumber(selected);
+      };
 
     return (
     <Layout>
