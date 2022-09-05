@@ -1,21 +1,32 @@
+
 import { Layout } from '../../Layout';
-//import { useApi } from './../../hooks/useApi';
+import useApi from '../../hooks/useApi'
 
 import {AboutSection, TeamSection, ProfilesContainer} from './style'
 import ProfileCard from '../../components/ProfileCard';
+import { useState, useEffect } from 'react';
 
 export default function About() {
-    //const api = useApi()
-    
+
+    let [about, setAbout] = useState('')
+    let [team, setTeam] = useState([])
+
+    const api = useApi()
+
+    useEffect(() => { 
+        api.getTeam().then(setTeam)
+        api.getAbout().then(about => setAbout(about.Sobre))
+
+    }, [])
+
+
     return (
     <Layout>
         
         <AboutSection>
             <div>
                 <h1>Sobre o projeto</h1>
-                <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                </p>
+                <p>{about}</p>
             </div>
             <img src="public\images\about-ilustration.svg" alt="" />
         </AboutSection>

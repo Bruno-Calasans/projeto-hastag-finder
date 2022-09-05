@@ -7,6 +7,7 @@ import {ReactComponent as LinkedinLogo} from '/public/icons/icon-awesome-linkedi
 
 export default function ProfileCard(props) {
 
+    // const {nome, descricao, github, email, linkedin} = props.user
     const { url, name, desc } = props.user
 
     return (
