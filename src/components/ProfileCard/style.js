@@ -10,7 +10,7 @@ export const Container = styled.div`
     text-align: center;
 
     width: 80%;
-    height: 300px;
+    height: 350px;
     padding: 20px;
     margin: 10px;
     
@@ -32,6 +32,7 @@ export const Profile = styled.figure`
 
 export const Avatar = styled.img`
     width: 100px;
+    height: 100px;
     border-radius: 50%;
     background-color: lightslategray;
 `
@@ -53,7 +54,7 @@ export const Description = styled.div`
     justify-content: center;
     align-items: center;
     font-size:1.2rem;
-    height: 30%;
+    height: 40%;
 `
 
 export const SocialMidiaContainer = styled.div`
