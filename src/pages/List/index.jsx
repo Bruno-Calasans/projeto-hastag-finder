@@ -19,11 +19,12 @@ export default function List() {
     
 
     const [pageNumber, setPageNumber] = useState(0)
-    const itensPerPage = 5
+    const itensPerPage = 10
     const pagesVisited = pageNumber * itensPerPage
 
     const displayItens = searches.slice(pagesVisited, pagesVisited + itensPerPage).map(searche => {
         return (
+        <>
         <C.Items key={searche}>
             <C.FirstParagraph>{searche.Hashtag}</C.FirstParagraph>
             <p>
@@ -33,6 +34,8 @@ export default function List() {
                 {new Intl.DateTimeFormat('pt-BR', { hour: '2-digit', minute: '2-digit'}).format(searche.Data*1000)}
             </p>
         </C.Items>
+        <C.Divider></C.Divider>
+        </>
 
         )
     })
@@ -43,8 +46,8 @@ export default function List() {
       };
 
     return (
-    <Layout>
-                <C.Title>Buscas Realizadas</C.Title>
+    <Layout>  
+                <C.BoxTitle><C.Title>Buscas Realizadas</C.Title></C.BoxTitle>
                 <C.Table>
                     <C.Header>
                         <C.TitleTable>Hashtag</C.TitleTable>
@@ -54,8 +57,10 @@ export default function List() {
                     </C.Header>
                     <div>
                         {displayItens} 
+                      
                        
                     </div>
+                    
                 </C.Table>
                 <ReactPaginate
                         previousLabel={"anterior"}

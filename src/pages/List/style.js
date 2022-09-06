@@ -1,30 +1,30 @@
 import styled from "styled-components";
 
+export const BoxTitle = styled.div`
+    width: 80vw;
+    margin: auto;
+`
 export const Title = styled.h3`
     font: normal normal bold 24px/28px Rubik;
     color: #72EFDB;
     text-align: center;
     margin: 18vh 35px 35px;
-
     @media(min-width: 769px){
-       text-align: left;
-       padding-left 55px;
-    }
-
-    @media(min-width: 770px){
         text-align: left;
-        padding-left: 170px;
-    }
 
-    
+     }
+     @media(min-width: 770px){
+         text-align: left;
+         
+     }
+     
 `
 
 export const Table = styled.div`
     width: 100%;
     margin: 0 auto;
-    background: #18326B;
+    background: #18326B ;
     border-radius: 14px;
-
     @media(min-width: 640px){
         width: 75vw;
     }
@@ -60,7 +60,6 @@ export const Items = styled.div`
     padding: 18px;
     color: #72EFDB;
     font-size: 14px;
-
     
 `
 export const FirstParagraph = styled.p`
@@ -77,4 +76,3 @@ export const Divider = styled.div`
         display:none;
     }
 `
-
