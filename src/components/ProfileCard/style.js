@@ -31,8 +31,8 @@ export const Profile = styled.figure`
 `
 
 export const Avatar = styled.img`
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
     border-radius: 50%;
     background-color: lightslategray;
 `
@@ -40,7 +40,7 @@ export const Avatar = styled.img`
 export const Name = styled.figcaption`
     flex-grow: 1;
     font-weight: bold;
-    font-size:1.8rem;
+    font-size: 1.8rem;
     display: flex;
     justify-content: center;
     align-items: center;
