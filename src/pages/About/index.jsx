@@ -1,12 +1,37 @@
+
 import { Layout } from '../../Layout';
-//import { useApi } from './../../hooks/useApi';
+import useApi from '../../hooks/useApi'
 
 import {AboutSection, TeamSection, ProfilesContainer} from './style'
 import ProfileCard from '../../components/ProfileCard';
+import { useState, useEffect } from 'react';
 
 export default function About() {
-    //const api = useApi()
-    
+
+    const [page, setpage] = useState({about: '', team: []})
+
+    const api = useApi()
+
+    const loadData = async () => {
+
+        let about = await api.getAbout().then(record => {
+            if(record){ return record.Sobre }
+        })
+
+        let team = await api.getTeam().then(record => {
+            if(record){ return record }
+        })
+
+        return {about, team}
+    }
+
+    useEffect(() => { 
+        loadData().then(setpage)
+
+    }, [])
+
+    const {about, team} = page
+
     return (
     <Layout>
         
@@ -14,7 +39,7 @@ export default function About() {
             <div>
                 <h1>Sobre o projeto</h1>
                 <p>
-                Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                    {about != '' ? about :  'Loading...'}
                 </p>
             </div>
             <img src="public\images\about-ilustration.svg" alt="" />
@@ -26,34 +51,14 @@ export default function About() {
 
             <ProfilesContainer>
 
-                <ProfileCard
-                user={{
-                    url: 'public/icons/icon-user-alt.svg',
-                    name: 'James Bakster',
-                    desc: 'Tenho mestrado em Ciências da Computação e CEO da empresa TodosFudidos'
-                }}/>
-
-                <ProfileCard
-                user={{
-                    url: 'public/icons/icon-user-alt.svg',
-                    name: 'Alex Lupin',
-                    desc: 'Formato em Análise e Desenvolvimento de Sistemas pela NoOrg e Entusiasta em Massagens Espirituas Demoníacas'
-                }}/>
-
-                <ProfileCard
-                user={{
-                    url: 'public/icons/icon-user-alt.svg',
-                    name: 'Cláudio Baunilha',
-                    desc: 'Formado em Gestão de Escravos e fundador do Insituto Todos Podem Ser Escravos'
-                }}/>
-
-                <ProfileCard
-                user={{
-                    url: 'public/icons/icon-user-alt.svg',
-                    name: 'Germe Verme',
-                    desc: 'Gosto de você. Me nota >.<'
-                }}/>
-
+                {
+                    (team.length > 0) ? 
+                    team.map((member, index) => {
+                        return <ProfileCard key={index} user={member}/>
+                    })
+                    : 'Loading...'
+                }
+        
             </ProfilesContainer>
 
         </TeamSection>

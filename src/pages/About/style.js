@@ -25,7 +25,7 @@ export const AboutSection = styled.section`
             color: #FCFCFC;
             text-align: start; 
             line-height: 2rem;
-            font-size: 1.3rem/1.8rem;
+            font-size: 1.8rem;
 
             max-width: 39vw;
             min-width: 290px;

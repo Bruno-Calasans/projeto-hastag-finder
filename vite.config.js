@@ -9,7 +9,7 @@ export default defineConfig({
     'env': {
       API_KEY: 'keyz8BAZKCTGY5dB1',
       BASE_KEY: 'app6wQWfM6eJngkD4',
-      SQUAD_ID: '7-22'
+      SQUAD_ID: '07-22'
     }
   }
 })

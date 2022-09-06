@@ -59,6 +59,7 @@ export const Items = styled.div`
     gap: 50px;
     padding: 18px;
     color: #72EFDB;
+    font-size: 14px;
 
     
 `
@@ -68,7 +69,6 @@ export const FirstParagraph = styled.p`
     color: #fff;  
 `
 
-
 export const Divider = styled.div`
     width: 98%;
     margin: auto;
@@ -77,3 +77,4 @@ export const Divider = styled.div`
         display:none;
     }
 `
+

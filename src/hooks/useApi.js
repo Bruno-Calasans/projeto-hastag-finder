@@ -56,8 +56,7 @@ const useApi = () => ({
             else { successAddSearch = true }
         })
 
-        return successAddSearch
-           
+        return successAddSearch 
     },
     async getTeam() {
 
