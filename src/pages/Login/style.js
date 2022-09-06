@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const Back = styled.div`
   background: url("../../../public/images/hero-bg.jpg");
   background-size: cover;
- 
 
   @media (max-width: 600px) {
     background: url("../../../public/images/mobile-hero-bg.jpg");
@@ -19,7 +18,7 @@ export const LoginSection = styled.div`
   padding: 23vh 0;
 `;
 
-export const Form = styled.div`
+export const FormArea = styled.div`
   width: 414px;
   height: 456px;
   margin: 0 auto;
@@ -47,14 +46,21 @@ export const Form = styled.div`
   }
 
   input {
+    outline: none;
     border-bottom: 2px solid #e9e9f010;
     padding: 10px;
     margin: 20px;
     width: 90%;
+    font-size: 15px;
     ::placeholder {
       color: #fff;
       font-size: 15px;
     }
+  }
+  span {
+    /* color: red; */
+    font-size: 12px;
+    letter-spacing: 1px;
   }
   button {
     border: 1px solid;
@@ -66,6 +72,7 @@ export const Form = styled.div`
     color: #0b1741;
     font-family: rubik, sans-serif;
     font-weight: 600;
+    font-size: 15px;
     margin-top: 30px;
     margin-bottom: 62px;
   }
