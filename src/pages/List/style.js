@@ -8,7 +8,7 @@ export const Title = styled.h3`
     font: normal normal bold 24px/28px Rubik;
     color: #72EFDB;
     text-align: center;
-    margin: 18vh 35px 35px;
+    margin: 15vh 35px 35px;
     @media(min-width: 769px){
         text-align: left;
 
