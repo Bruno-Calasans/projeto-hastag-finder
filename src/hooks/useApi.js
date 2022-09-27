@@ -39,12 +39,12 @@ const useApi = () => ({
 
         return searches
     },
-    async addSearch(hashtag, data) {
+    async addSearch(hashtag) {
 
         const searchRecord = {fields: {
             'Squad': SQUAD_ID,
             'Hashtag': hashtag,
-            'Data': data
+            'Data': new Date().getTime()
         }}
 
         let successAddSearch = null

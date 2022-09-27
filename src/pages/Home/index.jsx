@@ -19,6 +19,9 @@ export default function Home() {
 
     function handleInput(e){
         let hashValue = e.target.value
+        if(hashValue.length == 20){
+            return
+        }
         hashValue = hashValue.replace(/#/g, "")
         setHashtag(hashValue)
     }
