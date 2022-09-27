@@ -2,6 +2,7 @@ function orderTweets (onlyTweets, mediaAndTweets) {
   const tweetAndUser = []
   const tweetAndMediaAndUser = []
   
+  //Ordena os Tweets que podem ou nao conter imagens, agrupando usuário e tweet
   onlyTweets.data.map(tweet => {
     onlyTweets.includes.users.map(user => {
       if(tweet.author_id === user.id){
@@ -19,6 +20,7 @@ function orderTweets (onlyTweets, mediaAndTweets) {
     })
   })
   
+  //Ordena os Tweets contem imagens, agrupando usuário e tweet e medias
   mediaAndTweets.data.map((tweet) => {
     let medias = []
     
@@ -76,6 +78,7 @@ export async function getTweets(hashtag) {
   const tweetsAndMedias = await responseTweetsAndMedias.json()
   const onlyTweets = await responseOnlyTweets.json()
 
+  //caso nao tenha retorno de nenhum tweet
   if(onlyTweets.meta.result_count === 0 ){
     throw new Error('404')
   }

@@ -28,7 +28,7 @@ export default function Home() {
         if(hashtag.length === 0){
             return alert('Informe um valor válido para pesquisa!')
         }
-        
+
         api.addSearch(hashtag) //Salva a hash pesquisada na api do airtable
         setSearchResponse(prevState => ({
             ...prevState,
@@ -82,6 +82,8 @@ export default function Home() {
             </InputWrapper>  
         </Bg>
 
+
+        {/* Lógica de rendarizacao, falta adicionar componente 404, primeira pesquisa e loader */}
         {searchResponse.err ==='404' ? (
             <div>Nao foram encontrados resultados para sua pesquisa</div>
         ) : (
