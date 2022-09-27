@@ -2,23 +2,20 @@ import { Layout } from '../../Layout'
 import { Bg, InputWrapper, TitleWrapper } from './styled.js'
 import { HashtagGallery } from '../../components/HashtagGallery'
 import { useState } from 'react'
-
-const TWITTER_URL = "https://cors.eu.org/https://api.twitter.com/2/tweets/search/recent"
-const BEARER_TOKEN = "Bearer AAAAAAAAAAAAAAAAAAAAAFlKHgEAAAAApBW4nRyRkiogluzAbXlS4KuHlMU%3DFcR7r8N19LRnMHLVmYlFsod6Be6zUvZD2rxATotl6mLPAh2UEX"
-
-function twitterQuerys(tweet){
-    return `
-        ${TWITTER_URL}?query=${tweet}
-    `
-} 
+import { getTweets } from '../../hooks/twitterApi'
+import useApi from '../../hooks/useApi'
 
 export default function Home() {
 
-    const [ hashtag, setHashtag] = useState('')
+    const api = useApi()
+
+    const [ hashtag, setHashtag ] = useState('')
     const [ searchResponse, setSearchResponse ] = useState({
         loading: false,
-        tweets: {}
-    })
+        tweetsAndUsers: null,
+        tweetsAndMedias: null,
+        err: null
+    })    
 
     function handleInput(e){
         let hashValue = e.target.value
@@ -28,25 +25,36 @@ export default function Home() {
 
     async function handleSearch(){
 
+        if(hashtag.length === 0){
+            return alert('Informe um valor válido para pesquisa!')
+        }
+        
+        api.addSearch(hashtag) //Salva a hash pesquisada na api do airtable
         setSearchResponse(prevState => ({
             ...prevState,
-            loading: true 
+            loading: true,
+            err: null
         }))
-        fetch(twitterQuerys(hashtag), {
-            method: "GET",      
-            headers: { 
-                "Authorization": BEARER_TOKEN,
-            } 
-        })
-        .then(response => response.json()) 
-        .then(json => {
-            console.log('oi')
+
+        getTweets(hashtag)
+        .then(({tweetAndUser, tweetAndMediaAndUser})  => {
             setSearchResponse({
                 loading: false,
-                tweets: json
+                tweetsAndUsers: tweetAndUser,
+                tweetsAndMedias: tweetAndMediaAndUser,
+                err: null
             })
-        }) 
-        .catch(err => console.log(err))
+        })
+        .catch(e => {
+            console.log(e)
+            if(e.message === '404'){
+                setSearchResponse(prevState => ({
+                    ...prevState,
+                    loading: false,
+                    err: e.message
+                }))     
+            }
+        })
     }
 
     return (
@@ -74,22 +82,21 @@ export default function Home() {
             </InputWrapper>  
         </Bg>
 
-        {/* lógica de renderizaçao */}
-
-        {searchResponse.tweets.meta === undefined ? (
-            <div>Faça uma pesquisa virá aqui</div>
-        ) : ( 
-            searchResponse.loading === true ? (
-                <div>Carregando</div>
+        {searchResponse.err ==='404' ? (
+            <div>Nao foram encontrados resultados para sua pesquisa</div>
+        ) : (
+            searchResponse.loading === true? (
+                <div>carregando</div>
             ) : (
-                searchResponse.tweets.meta.result_count === 0 ? (
-                    <div>Nenhum resultado encontrado</div>
+                searchResponse.tweetsAndUsers === null ? (
+                    <div>faça uma pesquisa</div>
                 ) : (
                     <HashtagGallery
-                        tweets={searchResponse.tweets}
-                    />        
-                )        
-            )  
+                        tweetsAndUsers={searchResponse.tweetsAndUsers}
+                        tweetsAndMedias={searchResponse.tweetsAndMedias}
+                    />
+                )
+            )
         )}
     </Layout>
     )

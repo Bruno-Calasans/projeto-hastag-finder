@@ -1,9 +1,12 @@
 
 import { Button } from '../components/Button'
 import { ButtonsWrapper, Header, Logo, Footer, Main } from './styled'
+import { useContext } from 'react'
+import { AuthContext } from "../contexts/auth";
 
 export function Layout ({isLoggedIn ,route ,children}){
-
+  
+  const { authenticated } = useContext(AuthContext);
   return (
     <>
     <Header>
@@ -17,7 +20,7 @@ export function Layout ({isLoggedIn ,route ,children}){
       ) : (
         <Button type="home"/>
       )}
-      {isLoggedIn? (
+      {authenticated? (
         <Button type="logoff"/>
       ) : (
         <Button type="login"/>

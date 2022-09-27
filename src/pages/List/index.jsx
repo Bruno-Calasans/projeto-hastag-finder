@@ -12,11 +12,10 @@ export default function List() {
    
     useEffect(() => {
         api.getSearches().then(setSearches)
-        
     }, [])
 
 
-    
+
 
     const [pageNumber, setPageNumber] = useState(0)
     const itensPerPage = 10

@@ -32,7 +32,6 @@ export const InfoWrapper = styled.div`
 
 export const Avatar = styled.img`
   border-radius: 50%;
-
   width: 82px;
   height: 82px;
 `
@@ -40,7 +39,7 @@ export const Avatar = styled.img`
 export const Username = styled.h3`
   font-size: 2rem;
   margin-bottom: 8px;
-  > span {
+  > a {
     margin-left: 8px;
     font-size: 1.25rem;
     color:#8D9DA2;

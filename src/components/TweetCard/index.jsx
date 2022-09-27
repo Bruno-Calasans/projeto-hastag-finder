@@ -1,13 +1,13 @@
 import { CardWrapper, Avatar, InfoWrapper, Username, Description, LinkButton } from './styled'
  
-export function CardUser({avatar, username, twitter, description, link}) {
+export function TweetCard({tweet}) {
   return (
     <CardWrapper>
-      <Avatar src={avatar} alt={username}/>
+      <Avatar src={tweet.user.avatar} alt={tweet.user.username}/>
       <InfoWrapper>
-        <Username>{username}<span>{twitter}</span></Username>
-        <Description>{description}</Description> 
-        <LinkButton href={link} target="_blank" rel="noreferrer">Ver mais no Twitter</LinkButton>
+        <Username>{tweet.user.name}<a href={'https://twitter.com/' + tweet.user.username} target="_blank" rel="noreferrer">@{tweet.user.username}</a></Username>
+        <Description>{tweet.description}</Description> 
+        <LinkButton href={'https://twitter.com/' + tweet.user.username + '/status/' + tweet.id} target="_blank" rel="noreferrer">Ver mais no Twitter</LinkButton>
       </InfoWrapper>
     </CardWrapper>
   )

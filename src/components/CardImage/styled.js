@@ -13,9 +13,9 @@ export const ImageWrapper = styled.div`
   display: flex;
   align-items: flex-end;
 
-  -webkit-box-shadow: 0px 0px 68px -24px rgba(4,1,41,1), inset 0px -73px 75px -35px rgba(3,8,10,1);;
-  -moz-box-shadow: 0px 0px 68px -24px rgba(4,1,41,1), inset 0px -73px 75px -35px rgba(3,8,10,1);
-  box-shadow: 0px 0px 68px -24px rgba(4,1,41,1), inset 0px -73px 75px -35px rgba(3,8,10,1);
+  -webkit-box-shadow: 0px 0px 68px -24px rgba(1,1,1,1), inset 0px -73px 75px -35px rgba(1,1,1,1);;
+  -moz-box-shadow: 0px 0px 68px -24px rgba(1,1,1,1), inset 0px -73px 75px -35px rgba(1,1,1,1);
+  box-shadow: 0px 0px 68px -24px rgba(1,1,1,1), inset 0px -73px 75px -35px rgba(1,1,1,1);
 
  
   >p {

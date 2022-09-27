@@ -1,12 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState } from 'react'
 import { SearchMessage, SearchWrapper, ColumnCardUser, ColumnCardImage, SwitchWrapper, SwitchButton } from './styled.js'
-import { CardUser } from '../TweetCard'
+import { TweetCard } from '../TweetCard'
 import { CardImage } from '../CardImage'
 
-export function HashtagGallery (tweets){
+export function HashtagGallery ({tweetsAndUsers, tweetsAndMedias}){
     const [ selectedButton, setSelectedButton ] = useState("tweets")
-    console.log(tweets)
-
+  
     return (
     <>
     <SearchMessage>Exibindo os 10 resultados mais recentes para #natureza</SearchMessage> 
@@ -25,24 +24,28 @@ export function HashtagGallery (tweets){
         </SwitchButton>
     </SwitchWrapper>
     <SearchWrapper>
+        
         <ColumnCardImage
         className={ selectedButton !== "imagens"? "disabled" : "" }
         >
-            <CardImage
-            imgUrl='public/images/natureza1.jpg'
-            twitter='@twitterdofulano'
-            />
+            {tweetsAndMedias.map(tweet => (
+                <CardImage
+                key={tweet.id}
+                tweet={tweet} 
+                />
+            ))}
         </ColumnCardImage>
+    
         <ColumnCardUser
         className={ selectedButton !== "tweets"? "disabled" : "" }
         >
-            <CardUser
-                avatar="/images/perfil1.jpg"
-                username="Username"
-                twitter="@twitterdofulano"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
-                link="https://www.google.com"
-            />
+            {tweetsAndUsers.map(tweet => (
+                <TweetCard
+                    key={tweet.id}
+                    tweet={tweet} 
+                />
+            ))}
+            
         </ColumnCardUser>
     </SearchWrapper>
     </>

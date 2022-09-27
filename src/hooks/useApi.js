@@ -43,7 +43,7 @@ const useApi = () => ({
 
         const searchRecord = {fields: {
             'Squad': SQUAD_ID,
-            'Hastag': hashtag,
+            'Hashtag': hashtag,
             'Data': data
         }}
 
@@ -53,7 +53,9 @@ const useApi = () => ({
         .create([searchRecord], 
         (err, records) => {
             if(err) { successAddSearch = false }
-            else { successAddSearch = true }
+            else { 
+                console.log('deu bom')
+                successAddSearch = true }
         })
 
         return successAddSearch 
