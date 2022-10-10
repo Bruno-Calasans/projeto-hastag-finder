@@ -27,10 +27,10 @@ export default function List() {
         <C.Items key={searche}>
             <C.FirstParagraph>{searche.Hashtag}</C.FirstParagraph>
             <p>
-                 {new Intl.DateTimeFormat('pt-BR', { month: '2-digit',day: '2-digit'}).format(searche.Data*1000)}
+                 {new Intl.DateTimeFormat('pt-BR', { month: '2-digit',day: '2-digit'}).format(searche.Data)}
             </p>
             <p>
-                {new Intl.DateTimeFormat('pt-BR', { hour: '2-digit', minute: '2-digit'}).format(searche.Data*1000)}
+                {new Intl.DateTimeFormat('pt-BR', { hour: '2-digit', minute: '2-digit'}).format(searche.Data)}
             </p>
         </C.Items>
         <C.Divider></C.Divider>
